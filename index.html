@@ -22,7 +22,70 @@
       <h2>🌎 Select a Sweet Destiny</h2>
       <div class="country-grid" id="countryContainer"></div>
     </section>
-    <section></section>
+    <section id="view-list" class="view hidden">
+      <div class="view-header">
+        <button class="btn-back" data-target="view countries">⬅ Back to Countries</button>
+        <h2 id="selectedCountryTitle" style="margin-top: 10px;">Desserts of [country]</h2>
+      </div>
+      <input type="text" id="searchInput" placeholder="🔍 Search dessert by name or ingridient...">
+      <div id="recipeListContainer" class="recipe-grid"></div>
+      <div id="emptyState" class="hidden" style="text-align: center; padding: 40px; color: #888;">
+        <h3>😥 Oops.. It is Empty</h3>
+        <p>There is not a dessert registered from this Country yet... Be the first one!</p>
+      </div>
+    </section>
+    <section id="view-detail" class="view hidden">
+      <button class="btn-back" data-target="view-list">⬅ Back to List</button>
+      <div id="recipeDetailContent" class="detail-card"></div>
+      <div class="actions">
+        <button id="btnEditRecipe" class="btn-secondary">✏️ Edit</button>
+        <button id="btnDeleteRecipe" class="btn-danger">🗑️ Delete</button>
+      </div>
+    </section>
+    <section id="view-form" class="view hidden">
+      <button id="btn-back" data-target="view-country">Cancel</button>
+      <h2 id="formTitle" style="margin-top: 10px;">Create New Dessert</h2>
+      <form id="recipeForm">
+        <input type="hidden" id="editId">
+        <div class="form-group">
+          <label for="inputTitle">Dessert name:</label>
+          <input type="text" id="inputTitle" required placeholder="e.g:Strawberry Cheesecake">
+        </div>
+        <div class="form-group">
+          <label for="">Origin Country</label>
+          <select id="inputCountry" required class="form-select">
+            <option value="">Select a Country...</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Czech Republic">="Czech Republic</option>
+            <option value="Brasil">Brasil</option>
+
+          </select>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="form-group">
+
+            <label for="">Time (minutes)</label>
+            <input type="number" id="inputTime" placeholder="e.g: 60">
+          </div>
+          <div class="form-group">
+            <label for="">Label (separates for comma)</label>
+            <input type="text" id="inputTags" placeholder="baked,chocolate,cold">
+          </div>
+          <div class="form-group">
+            <label for="">Ingridients(1 per line)</label>
+            <textarea name="" id="inputIngredients" rows="6"
+              placeholder="e.g:&#10;200g flour&#10;100g sugar&#10;2 eggs"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Preparation Steps</label>
+            <textarea name="" id="InputSteps" rows="6" placeholder="How to prepare it..."></textarea>
+          </div>
+          <div style="text-align: center; margin-top: 30px;">
+            <button type="submit" class="btn-primary">Save Recipe 💾</button>
+          </div>
+        </div>
+      </form>
+    </section>
   </main>
 
 </body>
