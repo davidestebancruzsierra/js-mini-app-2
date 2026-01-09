@@ -4,6 +4,7 @@ const initialData = [
     title: "Pineapple Sweet",
     country: "Colombia",
     time: 40,
+    tags: ["Hot", "Cold", "Traditional", "No bake"],
     ingridients: [
       "1 ripe pineapple, chopped",
       "1 cup sugar or panela",
@@ -11,7 +12,7 @@ const initialData = [
       "2 cloves",
       "½ cup water",
     ],
-    Steps:
+    steps:
       "1. Place all ingredients in a pot.\n2. Cook over medium heat until the pineapple is soft.\n3. Let it reduce until thick.\n4.Remove cinnamon and cloves.\n5.Serve warm or cold.",
   },
   {
@@ -19,6 +20,8 @@ const initialData = [
     title: "Koláče",
     country: "Czech Republic",
     time: 110,
+    tags: ["Baked", "Hot", "Traditional", "Sweet"],
+
     ingridients: [
       "3 cups flour",
       "½ cup sugar",
@@ -28,7 +31,7 @@ const initialData = [
       "1 teaspoon dry yeast",
       "Filling: jam, cream cheese, or poppy seeds",
     ],
-    Steps:
+    steps:
       "1. Activate the yeast with warm milk.\n2. Mix all ingredients and knead.\n3. Let the dough rest for 60 minutes.\n4.Shape rolls and add filling.\n5.Bake at 180°C (350°F) for 20 minutes.",
   },
   {
@@ -36,13 +39,15 @@ const initialData = [
     title: "Brigadeiro",
     country: "Brasil",
     time: 25,
+    tags: ["Hot", "Cold", "No bake", "Classic"],
+
     ingridients: [
       "1 can sweetened condensed milk",
       "2 tablespoons cocoa powder",
       "1 tablespoon butter",
       "Chocolate sprinkles",
     ],
-    Steps:
+    steps:
       "1. Combine all ingredients in a saucepan.\n2. Cook over medium heat, stirring constantly.\n3. When it pulls away from the pan, remove from heat.\n4.Let cool.\n5.Roll into balls and coat with sprinkles.",
   },
 ];

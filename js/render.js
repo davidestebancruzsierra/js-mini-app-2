@@ -28,3 +28,50 @@ export function renderRecipeList(recipes) {
       </div>`);
   });
 }
+
+export function renderRecipeDetail(r) {
+  const tagsHtml = r.tags
+    .map(
+      (t) => `
+  <span class="tag-pill">${t}</span>
+  `
+    )
+    .join("");
+
+  const ingHtml = r.ingridients
+    .map(
+      (i) => `
+  <li>${i}</li>
+  `
+    )
+    .join("");
+  const stepsHtml = r.steps
+    .split("\n")
+    .filter((s) => s.trim())
+    .map((s) => `<li>${s}</li>`)
+    .join("");
+
+  const html = `
+  <div class="detail-header">
+  <h2 class="detail-title">${r.title}</h2>
+  <div class="detail-meta">
+  <span>${countryEmojis[r.country]} ${r.country}</span>
+  <span>⏱️ ${r.time} min</span>
+  </div>
+  <div class="tags-container">${tagsHtml}</div>
+  </div>
+  <div class="recipe-body">
+  <div class="ingridients-box">
+  <h3>📜 Ingridients</h3>
+  <ul>${ingHtml}</ul>
+  </div>
+  <div class="steps-box">
+  <h3>👩‍🍳 Steps</h3>
+  <ol>${stepsHtml}</ol>
+  </div>
+  </div>
+  
+  `;
+  $("#recipeDetailContent").html(html);
+  $("#btnEditRecipe", "btnEditRecipe").data("id", r.id);
+}
