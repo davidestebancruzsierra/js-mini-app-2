@@ -46,9 +46,11 @@ export function renderRecipeDetail(r) {
     )
     .join("");
   const stepsHtml = r.steps
-    .split("\n")
-    .filter((s) => s.trim())
-    .map((s) => `<li>${s}</li>`)
+    .map(
+      (s) => `
+  <li>${s}</li>
+  `
+    )
     .join("");
 
   const html = `

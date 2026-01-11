@@ -29,9 +29,9 @@ body {
   min-height: 100vh;
 }
 
-/* .hidden {
+.hidden {
   display: none !important;
-} */
+}
 .view.active {
   display: block;
   animation: slideUpFade 0.5s ease-out;
@@ -194,11 +194,12 @@ button {
     grid-template-columns: 1fr 2fr;
   }
 }
-.ingridients-box {
+.ingridients-box,
+.steps-box {
   padding: 25px;
 }
 .ingridients-list {
-  list-style: none !important;
+  list-style: none;
   padding-left: 5px;
 }
 .ingridients-list li {
@@ -231,4 +232,46 @@ button {
   padding: 0.5rem;
   border-radius: var(--radius-sm);
   font-size: 15px;
+}
+#recipeForm {
+  background: var(--optional-color-2);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--backgroud-body);
+}
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid white;
+  border-radius: var(--shadow-sm);
+  font-size: 1rem;
+  font-family: inherit;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+.actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  border-top: 2px solid var(--text-color-muted);
+  padding-top: 20px;
+}
+#searchInput {
+  margin-bottom: 25px;
+  border-radius: 30px;
+  padding-left: 20px;
 }

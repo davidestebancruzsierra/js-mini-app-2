@@ -39,7 +39,7 @@ export function initEventListeners() {
     $("#inputTime").val(r.time);
     $("#inputTags").val(r.tags.join(", "));
     $("#inputIngredients").val(r.ingridients.join("\n"));
-    $("#inputSteps").val(r.steps);
+    $("#inputSteps").val(r.steps.join("\n"));
     $("#formTile").text("Edit Recipe");
 
     showView("view-form");
@@ -66,7 +66,10 @@ export function initEventListeners() {
         .val()
         .split("\n")
         .filter((t) => t.trim()),
-      steps: $("#inputSteps").val(),
+      steps: $("#inputSteps")
+        .val()
+        .split("\n")
+        .filter((t) => t.trim()),
     };
     data.id ? Data.updateRecipe(data) : Data.addRecipe(data);
     currentCountry = data.country;

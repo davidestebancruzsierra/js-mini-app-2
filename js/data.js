@@ -12,8 +12,13 @@ const initialData = [
       "2 cloves",
       "½ cup water",
     ],
-    steps:
-      "1. Place all ingredients in a pot.\n2. Cook over medium heat until the pineapple is soft.\n3. Let it reduce until thick.\n4.Remove cinnamon and cloves.\n5.Serve warm or cold.",
+    steps: [
+      "Place all ingredients in a pot",
+      "Cook over medium heat until the pineapple is soft",
+      "Let it reduce until thick",
+      "Remove cinnamon and cloves",
+      "Serve warm or cold",
+    ],
   },
   {
     id: "2",
@@ -30,8 +35,13 @@ const initialData = [
       "1 teaspoon dry yeast",
       "Filling: jam, cream cheese, or poppy seeds",
     ],
-    steps:
-      "1. Activate the yeast with warm milk.\n2. Mix all ingredients and knead.\n3. Let the dough rest for 60 minutes.\n4.Shape rolls and add filling.\n5.Bake at 180°C (350°F) for 20 minutes.",
+    steps: [
+      "Activate the yeast with warm milk",
+      "Mix all ingredients and knead",
+      "Let the dough rest for 60 minutes",
+      "Shape rolls and add filling",
+      "Bake at 180°C(350°F) for 20 minutes",
+    ],
   },
   {
     id: "3",
@@ -45,8 +55,13 @@ const initialData = [
       "1 tablespoon butter",
       "Chocolate sprinkles",
     ],
-    steps:
-      "1. Combine all ingredients in a saucepan.\n2. Cook over medium heat, stirring constantly.\n3. When it pulls away from the pan, remove from heat.\n4.Let cool.\n5.Roll into balls and coat with sprinkles.",
+    steps: [
+      "Combine all ingredients in a saucepan",
+      "Cook over medium heat, stirring constantly.",
+      "When it pulls away from the pan, remove from heat.",
+      "Let cool",
+      "Roll into balls and coat with sprinkles",
+    ],
   },
 ];
 let recipes = JSON.parse(localStorage.getItem("myRecipes")) || initialData;
