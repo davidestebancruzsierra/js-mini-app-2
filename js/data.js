@@ -21,7 +21,6 @@ const initialData = [
     country: "Czech Republic",
     time: 110,
     tags: ["Baked", "Hot", "Traditional", "Sweet"],
-
     ingridients: [
       "3 cups flour",
       "½ cup sugar",
@@ -40,7 +39,6 @@ const initialData = [
     country: "Brasil",
     time: 25,
     tags: ["Hot", "Cold", "No bake", "Classic"],
-
     ingridients: [
       "1 can sweetened condensed milk",
       "2 tablespoons cocoa powder",
@@ -69,7 +67,7 @@ export function updateRecipe(r) {
   recipes = recipes.map((old) => (old.id === r.id ? r : old));
   save();
 }
-export function deleteRecipe(r) {
+export function deleteRecipe(id) {
   recipes = recipes.filter((r) => r.id !== id);
   save();
 }

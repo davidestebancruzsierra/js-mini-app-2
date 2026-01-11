@@ -19,10 +19,10 @@ export function initEventListeners() {
   });
   $(".btn-back").on("click", function () {
     const target = $(this).data("target");
-    if (target === "view-countries");
-    Render.renderCountries(Data.getUniqueCountries());
-    if (target === "view-list");
-    Render.renderRecipeList(Data.getRecipesByCountry(currentCountry));
+    if (target === "view-countries")
+      Render.renderCountries(Data.getUniqueCountries());
+    if (target === "view-list")
+      Render.renderRecipeList(Data.getRecipesByCountry(currentCountry));
     showView(target);
   });
   $("#btnNewRecipe").on("click", function () {
@@ -35,11 +35,11 @@ export function initEventListeners() {
     const r = Data.getRecipesById($(this).data("id").toString());
     $("#editId").val(r.id);
     $("#inputTitle").val(r.title);
-    $("inputCountry").val(r.country);
-    $("inputTime").val(r.time);
-    $("inputTags").val(r.tags.join(", "));
-    $("inputIngredients").val(r.ingridients.join("\n"));
-    $("inputSteps").val(r.steps);
+    $("#inputCountry").val(r.country);
+    $("#inputTime").val(r.time);
+    $("#inputTags").val(r.tags.join(", "));
+    $("#inputIngredients").val(r.ingridients.join("\n"));
+    $("#inputSteps").val(r.steps);
     $("#formTile").text("Edit Recipe");
 
     showView("view-form");
@@ -56,17 +56,17 @@ export function initEventListeners() {
     const data = {
       id: $("#editId").val(),
       title: $("#inputTitle").val(),
-      country: $("inputCountry").val(),
-      time: $("inputTime").val(),
-      tags: $("inputTags")
+      country: $("#inputCountry").val(),
+      time: $("#inputTime").val(),
+      tags: $("#inputTags")
         .val()
         .split(",")
         .map((t) => t.trim()),
-      ingridients: $("inputIngredients")
+      ingridients: $("#inputIngredients")
         .val()
         .split("\n")
         .filter((t) => t.trim()),
-      steps: $("inputSteps").val(),
+      steps: $("#inputSteps").val(),
     };
     data.id ? Data.updateRecipe(data) : Data.addRecipe(data);
     currentCountry = data.country;

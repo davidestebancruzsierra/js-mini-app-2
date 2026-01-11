@@ -1,6 +1,6 @@
 const countryEmojis = {
   Colombia: "co",
-  CzechRepublic: "cz",
+  "Czech Republic": "cz",
   Brasil: "br",
 };
 
@@ -15,7 +15,7 @@ export function renderCountries(countries) {
 }
 
 export function renderRecipeList(recipes) {
-  const $box = $("recipeListContainer").empty();
+  const $box = $("#recipeListContainer").empty();
   if (recipes.lenght === 0) return $("#emptyState").removeClass("hidden");
   $("#emptyState").addClass("hidden");
   recipes.forEach((r) => {
@@ -63,15 +63,15 @@ export function renderRecipeDetail(r) {
   <div class="recipe-body">
   <div class="ingridients-box">
   <h3>📜 Ingridients</h3>
-  <ul>${ingHtml}</ul>
+  <ul class="ingridients-list">${ingHtml}</ul>
   </div>
   <div class="steps-box">
   <h3>👩‍🍳 Steps</h3>
-  <ol>${stepsHtml}</ol>
+  <ol class="steps-list">${stepsHtml}</ol>
   </div>
   </div>
   
   `;
   $("#recipeDetailContent").html(html);
-  $("#btnEditRecipe", "btnEditRecipe").data("id", r.id);
+  $("#btnEditRecipe").data("id", r.id);
 }
