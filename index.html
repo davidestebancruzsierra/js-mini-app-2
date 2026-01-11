@@ -24,7 +24,7 @@
     </section>
     <section id="view-list" class="view hidden">
       <div class="view-header">
-        <button class="btn-back" data-target="view countries">⬅ Back to Countries</button>
+        <button class="btn-back" data-target="view-countries">⬅ Back to Countries</button>
         <h2 id="selectedCountryTitle" style="margin-top: 10px;">Desserts of [country]</h2>
       </div>
       <input type="text" id="searchInput" placeholder="🔍 Search dessert by name or ingridient...">
@@ -43,7 +43,7 @@
       </div>
     </section>
     <section id="view-form" class="view hidden">
-      <button id="btn-back" data-target="view-country">Cancel</button>
+      <button class="btn-back" data-target="view-countries">Cancel</button>
       <h2 id="formTitle" style="margin-top: 10px;">Create New Dessert</h2>
       <form id="recipeForm">
         <input type="hidden" id="editId">
@@ -56,7 +56,7 @@
           <select id="inputCountry" required class="form-select">
             <option value="">Select a Country...</option>
             <option value="Colombia">Colombia</option>
-            <option value="Czech Republic">="Czech Republic</option>
+            <option value="Czech Republic">Czech Republic</option>
             <option value="Brasil">Brasil</option>
 
           </select>
@@ -78,7 +78,7 @@
           </div>
           <div class="form-group">
             <label for="">Preparation Steps</label>
-            <textarea name="" id="InputSteps" rows="6" placeholder="How to prepare it..."></textarea>
+            <textarea id="inputSteps" rows="5" placeholder="How to prepare it..."></textarea>
           </div>
           <div style="text-align: center; margin-top: 30px;">
             <button type="submit" class="btn-primary">Save Recipe 💾</button>
